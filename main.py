@@ -23,7 +23,7 @@ class PruebaGUI(QMainWindow):
         self.et.setText(":(")
 
     def funcionInutil(self):
-        print("Hola soy una funcion y no sirvo para nada :'v")
+        print("Hola soy una funcion y no sirvo para nada, igual que el Manchester United :'v")
 
 
 if __name__ == '__main__':

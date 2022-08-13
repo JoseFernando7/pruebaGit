@@ -22,6 +22,9 @@ class PruebaGUI(QMainWindow):
         self.btn1.setEnabled(True)
         self.et.setText(":(")
 
+    def funcionInutil(self):
+        print("Hola soy una funcion y no sirvo para nada :'v")
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

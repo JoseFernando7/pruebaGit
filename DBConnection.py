@@ -4,7 +4,7 @@ import mysql.connector
 class RegistroDatos:
     # Esto es para crear la conexion a la base de datos
     def __init__(self):
-        self.conexion = mysql.connector.connect(host="localhost", database="productosBD", user="root",
+        self.conexion = mysql.connector.connect(host='localhost', database="productosBD", user='josef7',
                                                 password="Jose-072000")
 
     # Funcion para insertar productos

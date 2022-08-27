@@ -15,12 +15,14 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1089, 578)
-        MainWindow.setStyleSheet("")
+        MainWindow.setStyleSheet("background-color: #151722;")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
         self.tabWidget.setGeometry(QtCore.QRect(-4, -1, 1101, 581))
         self.tabWidget.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
+        self.tabWidget.setStyleSheet("background-color: #151722;\n"
+"color: #fff;")
         self.tabWidget.setObjectName("tabWidget")
         self.tab = QtWidgets.QWidget()
         self.tab.setObjectName("tab")
@@ -78,12 +80,14 @@ class Ui_MainWindow(object):
         self.bRefrescar.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.bRefrescar.setStyleSheet("QPushButton\n"
 "{\n"
-"    border: 2px solid #000;\n"
+"    border: 2px solid #fff;\n"
+"    border-radius: 10px\n"
 "}\n"
 "\n"
 "QPushButton:hover\n"
 "{\n"
-"    background-color: #ccc;\n"
+"    background-color: #999;\n"
+"    color: #000;\n"
 "}")
         self.bRefrescar.setObjectName("bRefrescar")
         self.tabWidget.addTab(self.tab, "")
@@ -100,6 +104,8 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(15)
         self.inputBuscar.setFont(font)
+        self.inputBuscar.setStyleSheet("border: 1px solid #ccc;\n"
+"border-radius: 10px;")
         self.inputBuscar.setObjectName("inputBuscar")
         self.tProductosB = QtWidgets.QTableWidget(self.tab_2)
         self.tProductosB.setGeometry(QtCore.QRect(30, 80, 853, 450))
@@ -147,12 +153,14 @@ class Ui_MainWindow(object):
         self.bBuscar.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.bBuscar.setStyleSheet("QPushButton\n"
 "{\n"
-"    border: 2px solid #000;\n"
+"    border: 2px solid #fff;\n"
+"    border-radius: 10px\n"
 "}\n"
 "\n"
 "QPushButton:hover\n"
 "{\n"
-"    background-color: #ccc;\n"
+"    background-color: #999;\n"
+"    color: #000;\n"
 "}")
         self.bBuscar.setObjectName("bBuscar")
         self.tabWidget.addTab(self.tab_2, "")
@@ -182,7 +190,9 @@ class Ui_MainWindow(object):
         self.formLayout.setWidget(2, QtWidgets.QFormLayout.LabelRole, self.label_3)
         self.inputANombre = QtWidgets.QLineEdit(self.formLayoutWidget)
         self.inputANombre.setStyleSheet("margin-top: 10px;\n"
-"padding: 5px;")
+"padding: 5px;\n"
+"border: 1px solid #ccc;\n"
+"border-radius: 10px;")
         self.inputANombre.setObjectName("inputANombre")
         self.formLayout.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.inputANombre)
         self.label_4 = QtWidgets.QLabel(self.formLayoutWidget)
@@ -195,7 +205,9 @@ class Ui_MainWindow(object):
         self.formLayout.setWidget(3, QtWidgets.QFormLayout.LabelRole, self.label_4)
         self.inputAModelo = QtWidgets.QLineEdit(self.formLayoutWidget)
         self.inputAModelo.setStyleSheet("margin-top: 10px;\n"
-"padding: 5px;")
+"padding: 5px;\n"
+"border: 1px solid #ccc;\n"
+"border-radius: 10px;")
         self.inputAModelo.setObjectName("inputAModelo")
         self.formLayout.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.inputAModelo)
         self.label_5 = QtWidgets.QLabel(self.formLayoutWidget)
@@ -208,7 +220,9 @@ class Ui_MainWindow(object):
         self.formLayout.setWidget(4, QtWidgets.QFormLayout.LabelRole, self.label_5)
         self.inputAPrecio = QtWidgets.QLineEdit(self.formLayoutWidget)
         self.inputAPrecio.setStyleSheet("margin-top: 10px;\n"
-"padding: 5px;")
+"padding: 5px;\n"
+"border: 1px solid #ccc;\n"
+"border-radius: 10px;")
         self.inputAPrecio.setObjectName("inputAPrecio")
         self.formLayout.setWidget(4, QtWidgets.QFormLayout.FieldRole, self.inputAPrecio)
         self.label_6 = QtWidgets.QLabel(self.formLayoutWidget)
@@ -221,12 +235,16 @@ class Ui_MainWindow(object):
         self.formLayout.setWidget(5, QtWidgets.QFormLayout.LabelRole, self.label_6)
         self.inputACantidad = QtWidgets.QLineEdit(self.formLayoutWidget)
         self.inputACantidad.setStyleSheet("margin-top: 10px;\n"
-"padding: 5px;")
+"padding: 5px;\n"
+"border: 1px solid #ccc;\n"
+"border-radius: 10px;")
         self.inputACantidad.setObjectName("inputACantidad")
         self.formLayout.setWidget(5, QtWidgets.QFormLayout.FieldRole, self.inputACantidad)
         self.inputACodigo = QtWidgets.QLineEdit(self.formLayoutWidget)
         self.inputACodigo.setStyleSheet("margin-top: 10px;\n"
-"padding: 5px;")
+"padding: 5px;\n"
+"border: 1px solid #ccc;\n"
+"border-radius: 10px;")
         self.inputACodigo.setObjectName("inputACodigo")
         self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.inputACodigo)
         self.bAgrProducto = QtWidgets.QPushButton(self.tab_3)
@@ -237,12 +255,14 @@ class Ui_MainWindow(object):
         self.bAgrProducto.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.bAgrProducto.setStyleSheet("QPushButton\n"
 "{\n"
-"    border: 2px solid #000;\n"
+"    border: 2px solid #fff;\n"
+"    border-radius: 10px\n"
 "}\n"
 "\n"
 "QPushButton:hover\n"
 "{\n"
-"    background-color: #ccc;\n"
+"    background-color: #999;\n"
+"    color: #000;\n"
 "}")
         self.bAgrProducto.setObjectName("bAgrProducto")
         self.tabWidget.addTab(self.tab_3, "")
@@ -263,7 +283,9 @@ class Ui_MainWindow(object):
         self.formLayout_2.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.label_8)
         self.actCodigo = QtWidgets.QLineEdit(self.formLayoutWidget_2)
         self.actCodigo.setStyleSheet("margin-top: 10px;\n"
-"padding: 5px;")
+"padding: 5px;\n"
+"border: 1px solid #ccc;\n"
+"border-radius: 10px;")
         self.actCodigo.setObjectName("actCodigo")
         self.formLayout_2.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.actCodigo)
         self.label_9 = QtWidgets.QLabel(self.formLayoutWidget_2)
@@ -275,7 +297,9 @@ class Ui_MainWindow(object):
         self.formLayout_2.setWidget(1, QtWidgets.QFormLayout.LabelRole, self.label_9)
         self.actNombre = QtWidgets.QLineEdit(self.formLayoutWidget_2)
         self.actNombre.setStyleSheet("margin-top: 10px;\n"
-"padding: 5px;")
+"padding: 5px;\n"
+"border: 1px solid #ccc;\n"
+"border-radius: 10px;")
         self.actNombre.setObjectName("actNombre")
         self.formLayout_2.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.actNombre)
         self.label_10 = QtWidgets.QLabel(self.formLayoutWidget_2)
@@ -287,7 +311,9 @@ class Ui_MainWindow(object):
         self.formLayout_2.setWidget(2, QtWidgets.QFormLayout.LabelRole, self.label_10)
         self.actModelo = QtWidgets.QLineEdit(self.formLayoutWidget_2)
         self.actModelo.setStyleSheet("margin-top: 10px;\n"
-"padding: 5px;")
+"padding: 5px;\n"
+"border: 1px solid #ccc;\n"
+"border-radius: 10px;")
         self.actModelo.setObjectName("actModelo")
         self.formLayout_2.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.actModelo)
         self.label_11 = QtWidgets.QLabel(self.formLayoutWidget_2)
@@ -299,7 +325,9 @@ class Ui_MainWindow(object):
         self.formLayout_2.setWidget(3, QtWidgets.QFormLayout.LabelRole, self.label_11)
         self.acrPrecio = QtWidgets.QLineEdit(self.formLayoutWidget_2)
         self.acrPrecio.setStyleSheet("margin-top: 10px;\n"
-"padding: 5px;")
+"padding: 5px;\n"
+"border: 1px solid #ccc;\n"
+"border-radius: 10px;")
         self.acrPrecio.setObjectName("acrPrecio")
         self.formLayout_2.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.acrPrecio)
         self.label_12 = QtWidgets.QLabel(self.formLayoutWidget_2)
@@ -311,7 +339,9 @@ class Ui_MainWindow(object):
         self.formLayout_2.setWidget(4, QtWidgets.QFormLayout.LabelRole, self.label_12)
         self.actCantidad = QtWidgets.QLineEdit(self.formLayoutWidget_2)
         self.actCantidad.setStyleSheet("margin-top: 10px;\n"
-"padding: 5px;")
+"padding: 5px;\n"
+"border: 1px solid #ccc;\n"
+"border-radius: 10px;")
         self.actCantidad.setObjectName("actCantidad")
         self.formLayout_2.setWidget(4, QtWidgets.QFormLayout.FieldRole, self.actCantidad)
         self.label_7 = QtWidgets.QLabel(self.tab_4)
@@ -323,6 +353,8 @@ class Ui_MainWindow(object):
         self.label_7.setObjectName("label_7")
         self.idProducto = QtWidgets.QLineEdit(self.tab_4)
         self.idProducto.setGeometry(QtCore.QRect(100, 220, 260, 30))
+        self.idProducto.setStyleSheet("border: 1px solid #ccc;\n"
+"border-radius: 10px;")
         self.idProducto.setObjectName("idProducto")
         self.bBuscarAct = QtWidgets.QPushButton(self.tab_4)
         self.bBuscarAct.setGeometry(QtCore.QRect(160, 280, 131, 31))
@@ -330,6 +362,17 @@ class Ui_MainWindow(object):
         font.setPointSize(13)
         self.bBuscarAct.setFont(font)
         self.bBuscarAct.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.bBuscarAct.setStyleSheet("QPushButton\n"
+"{\n"
+"    border: 2px solid #fff;\n"
+"    border-radius: 10px\n"
+"}\n"
+"\n"
+"QPushButton:hover\n"
+"{\n"
+"    background-color: #999;\n"
+"    color: #000;\n"
+"}")
         self.bBuscarAct.setObjectName("bBuscarAct")
         self.bActualizar = QtWidgets.QPushButton(self.tab_4)
         self.bActualizar.setGeometry(QtCore.QRect(410, 440, 241, 51))
@@ -339,12 +382,14 @@ class Ui_MainWindow(object):
         self.bActualizar.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.bActualizar.setStyleSheet("QPushButton\n"
 "{\n"
-"    border: 2px solid #000;\n"
+"    border: 2px solid #fff;\n"
+"    border-radius: 10px\n"
 "}\n"
 "\n"
 "QPushButton:hover\n"
 "{\n"
-"    background-color: #ccc;\n"
+"    background-color: #999;\n"
+"    color: #000;\n"
 "}")
         self.bActualizar.setObjectName("bActualizar")
         self.etInfoAct = QtWidgets.QLabel(self.tab_4)
@@ -407,12 +452,25 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(15)
         self.inputBuscarDlt.setFont(font)
+        self.inputBuscarDlt.setStyleSheet("border: 1px solid #ccc;\n"
+"border-radius: 10px;")
         self.inputBuscarDlt.setObjectName("inputBuscarDlt")
         self.bOkDlt = QtWidgets.QPushButton(self.tab_5)
         self.bOkDlt.setGeometry(QtCore.QRect(360, 20, 121, 31))
         font = QtGui.QFont()
         font.setPointSize(15)
         self.bOkDlt.setFont(font)
+        self.bOkDlt.setStyleSheet("QPushButton\n"
+"{\n"
+"    border: 2px solid #fff;\n"
+"    border-radius: 10px\n"
+"}\n"
+"\n"
+"QPushButton:hover\n"
+"{\n"
+"    background-color: #999;\n"
+"    color: #000;\n"
+"}")
         self.bOkDlt.setObjectName("bOkDlt")
         self.bBorrar = QtWidgets.QPushButton(self.tab_5)
         self.bBorrar.setGeometry(QtCore.QRect(900, 500, 180, 30))
@@ -422,12 +480,14 @@ class Ui_MainWindow(object):
         self.bBorrar.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.bBorrar.setStyleSheet("QPushButton\n"
 "{\n"
-"    border: 2px solid #000;\n"
+"    border: 2px solid #fff;\n"
+"    border-radius: 10px\n"
 "}\n"
 "\n"
 "QPushButton:hover\n"
 "{\n"
-"    background-color: #ccc;\n"
+"    background-color: #999;\n"
+"    color: #000;\n"
 "}")
         self.bBorrar.setObjectName("bBorrar")
         self.etInfoDlt = QtWidgets.QLabel(self.tab_5)

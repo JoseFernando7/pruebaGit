@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">background-color: #151722;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QTabWidget" name="tabWidget">
@@ -28,6 +28,10 @@
     </property>
     <property name="cursor">
      <cursorShape>ArrowCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #151722;
+color: #fff;</string>
     </property>
     <property name="currentIndex">
      <number>0</number>
@@ -145,12 +149,14 @@
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-	border: 2px solid #000;
+	border: 2px solid #fff;
+	border-radius: 10px
 }
 
 QPushButton:hover
 {
-	background-color: #ccc;
+	background-color: #999;
+	color: #000;
 }</string>
       </property>
       <property name="text">
@@ -193,6 +199,10 @@ QPushButton:hover
        <font>
         <pointsize>15</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid #ccc;
+border-radius: 10px;</string>
       </property>
      </widget>
      <widget class="QTableWidget" name="tProductosB">
@@ -289,12 +299,14 @@ QPushButton:hover
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-	border: 2px solid #000;
+	border: 2px solid #fff;
+	border-radius: 10px
 }
 
 QPushButton:hover
 {
-	background-color: #ccc;
+	background-color: #999;
+	color: #000;
 }</string>
       </property>
       <property name="text">
@@ -359,7 +371,9 @@ QPushButton:hover
         <widget class="QLineEdit" name="inputANombre">
          <property name="styleSheet">
           <string notr="true">margin-top: 10px;
-padding: 5px;</string>
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 10px;</string>
          </property>
         </widget>
        </item>
@@ -385,7 +399,9 @@ padding: 5px;</string>
         <widget class="QLineEdit" name="inputAModelo">
          <property name="styleSheet">
           <string notr="true">margin-top: 10px;
-padding: 5px;</string>
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 10px;</string>
          </property>
         </widget>
        </item>
@@ -411,7 +427,9 @@ padding: 5px;</string>
         <widget class="QLineEdit" name="inputAPrecio">
          <property name="styleSheet">
           <string notr="true">margin-top: 10px;
-padding: 5px;</string>
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 10px;</string>
          </property>
         </widget>
        </item>
@@ -437,7 +455,9 @@ padding: 5px;</string>
         <widget class="QLineEdit" name="inputACantidad">
          <property name="styleSheet">
           <string notr="true">margin-top: 10px;
-padding: 5px;</string>
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 10px;</string>
          </property>
         </widget>
        </item>
@@ -445,7 +465,9 @@ padding: 5px;</string>
         <widget class="QLineEdit" name="inputACodigo">
          <property name="styleSheet">
           <string notr="true">margin-top: 10px;
-padding: 5px;</string>
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 10px;</string>
          </property>
         </widget>
        </item>
@@ -471,12 +493,14 @@ padding: 5px;</string>
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-	border: 2px solid #000;
+	border: 2px solid #fff;
+	border-radius: 10px
 }
 
 QPushButton:hover
 {
-	background-color: #ccc;
+	background-color: #999;
+	color: #000;
 }</string>
       </property>
       <property name="text">
@@ -526,7 +550,9 @@ QPushButton:hover
         <widget class="QLineEdit" name="actCodigo">
          <property name="styleSheet">
           <string notr="true">margin-top: 10px;
-padding: 5px;</string>
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 10px;</string>
          </property>
         </widget>
        </item>
@@ -549,7 +575,9 @@ padding: 5px;</string>
         <widget class="QLineEdit" name="actNombre">
          <property name="styleSheet">
           <string notr="true">margin-top: 10px;
-padding: 5px;</string>
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 10px;</string>
          </property>
         </widget>
        </item>
@@ -572,7 +600,9 @@ padding: 5px;</string>
         <widget class="QLineEdit" name="actModelo">
          <property name="styleSheet">
           <string notr="true">margin-top: 10px;
-padding: 5px;</string>
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 10px;</string>
          </property>
         </widget>
        </item>
@@ -595,7 +625,9 @@ padding: 5px;</string>
         <widget class="QLineEdit" name="acrPrecio">
          <property name="styleSheet">
           <string notr="true">margin-top: 10px;
-padding: 5px;</string>
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 10px;</string>
          </property>
         </widget>
        </item>
@@ -618,7 +650,9 @@ padding: 5px;</string>
         <widget class="QLineEdit" name="actCantidad">
          <property name="styleSheet">
           <string notr="true">margin-top: 10px;
-padding: 5px;</string>
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 10px;</string>
          </property>
         </widget>
        </item>
@@ -654,6 +688,10 @@ padding: 5px;</string>
         <height>30</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid #ccc;
+border-radius: 10px;</string>
+      </property>
      </widget>
      <widget class="QPushButton" name="bBuscarAct">
       <property name="geometry">
@@ -671,6 +709,19 @@ padding: 5px;</string>
       </property>
       <property name="cursor">
        <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	border: 2px solid #fff;
+	border-radius: 10px
+}
+
+QPushButton:hover
+{
+	background-color: #999;
+	color: #000;
+}</string>
       </property>
       <property name="text">
        <string>Buscar</string>
@@ -696,12 +747,14 @@ padding: 5px;</string>
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-	border: 2px solid #000;
+	border: 2px solid #fff;
+	border-radius: 10px
 }
 
 QPushButton:hover
 {
-	background-color: #ccc;
+	background-color: #999;
+	color: #000;
 }</string>
       </property>
       <property name="text">
@@ -840,6 +893,10 @@ QPushButton:hover
         <pointsize>15</pointsize>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid #ccc;
+border-radius: 10px;</string>
+      </property>
      </widget>
      <widget class="QPushButton" name="bOkDlt">
       <property name="geometry">
@@ -854,6 +911,19 @@ QPushButton:hover
        <font>
         <pointsize>15</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton
+{
+	border: 2px solid #fff;
+	border-radius: 10px
+}
+
+QPushButton:hover
+{
+	background-color: #999;
+	color: #000;
+}</string>
       </property>
       <property name="text">
        <string>Ok</string>
@@ -879,12 +949,14 @@ QPushButton:hover
       <property name="styleSheet">
        <string notr="true">QPushButton
 {
-	border: 2px solid #000;
+	border: 2px solid #fff;
+	border-radius: 10px
 }
 
 QPushButton:hover
 {
-	background-color: #ccc;
+	background-color: #999;
+	color: #000;
 }</string>
       </property>
       <property name="text">

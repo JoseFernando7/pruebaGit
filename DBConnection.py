@@ -35,10 +35,19 @@ class RegistroDatos:
         cursor.close()
         return registro
 
-    # Funcion para eliminar productos
-    def eliminar_productos(self, nombre_producto):
+    # Funcion para buscar un solo producto especifico por el codigo
+    def buscar_id_producto(self, codigo_producto):
         cursor = self.conexion.cursor()
-        sql = "DELETE FROM productos WHERE NOMBRE = {}".format(nombre_producto)
+        sql = "SELECT * FROM productos WHERE CODIGO = {}".format(codigo_producto)
+        cursor.execute(sql)
+        registro = cursor.fetchall()
+        cursor.close()
+        return registro
+
+    # Funcion para eliminar productos
+    def eliminar_productos(self, codigo_producto):
+        cursor = self.conexion.cursor()
+        sql = "DELETE FROM productos WHERE CODIGO = {}".format(codigo_producto)
         cursor.execute(sql)
         registro = cursor.rowcount
         self.conexion.commit()
@@ -49,8 +58,8 @@ class RegistroDatos:
     def actualizar_productos(self, codigo, nombre, modelo, precio, cantidad):
         cursor = self.conexion.cursor()
         sql = '''
-        UPDATE productos SET CODIGO="{}", MODELO="{}", PRECIO="{}", CANTIDAD="{}"
-        WHERE NOMBRE="{}"'''.format(codigo, modelo, precio, cantidad, nombre)
+        UPDATE productos SET NOMBRE="{}", MODELO="{}", PRECIO="{}", CANTIDAD="{}"
+        WHERE CODIGO="{}"'''.format(nombre, modelo, precio, cantidad, codigo)
         cursor.execute(sql)
         registro = cursor.rowcount
         self.conexion.commit()

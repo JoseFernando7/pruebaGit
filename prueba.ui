@@ -57,6 +57,9 @@
       <property name="styleSheet">
        <string notr="true">border: 1px solid #000;</string>
       </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
       <attribute name="horizontalHeaderVisible">
        <bool>true</bool>
       </attribute>
@@ -203,6 +206,9 @@ QPushButton:hover
       </property>
       <property name="styleSheet">
        <string notr="true">border: 1px solid #000;</string>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
       </property>
       <attribute name="horizontalHeaderDefaultSectionSize">
        <number>170</number>
@@ -702,6 +708,27 @@ QPushButton:hover
        <string>Actualizar</string>
       </property>
      </widget>
+     <widget class="QLabel" name="etInfoAct">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>370</y>
+        <width>260</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_5">
      <attribute name="title">
@@ -718,6 +745,9 @@ QPushButton:hover
       </property>
       <property name="styleSheet">
        <string notr="true">border: 1px solid #000;</string>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
       </property>
       <attribute name="horizontalHeaderDefaultSectionSize">
        <number>170</number>
@@ -859,6 +889,27 @@ QPushButton:hover
       </property>
       <property name="text">
        <string>Borrar</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="etInfoDlt">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>20</y>
+        <width>260</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </widget>

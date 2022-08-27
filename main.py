@@ -16,6 +16,8 @@ class MiApp(QtWidgets.QMainWindow):
         self.ui.bBuscar.clicked.connect(self.buscarProducto)
         self.ui.bBorrar.clicked.connect(self.eliminarProducto)
         self.ui.bActualizar.clicked.connect(self.modificarProductos)
+        self.ui.bBuscarAct.clicked.connect(self.buscarProductoAct)
+        self.ui.bOkDlt.clicked.connect(self.buscarProductoDel)
 
         self.ui.tProductos.setColumnWidth(0, 170)
         self.ui.tProductos.setColumnWidth(1, 170)
@@ -65,35 +67,27 @@ class MiApp(QtWidgets.QMainWindow):
         self.ui.inputACantidad.clear()
 
     def modificarProductos(self):
-        id_producto = self.ui.idProducto.text()
-        id_producto = str("'" + id_producto + "'")
-        nombreX = self.datosTotal.buscar_producto(id_producto)
-        print(nombreX)
+        codigoM = self.ui.actCodigo.text()
+        nombreM = self.ui.actNombre.text()
+        modeloM = self.ui.actModelo.text()
+        precioM = self.ui.acrPrecio.text()
+        cantidadM = self.ui.actCantidad.text()
 
-        if nombreX:
-            self.ui.bBuscarAct.setText("ACTUALIZAR")
-
-            codigoM = self.ui.actCodigo.text()
-            nombreM = self.ui.actNombre.text()
-            modeloM = self.ui.actModelo.text()
-            precioM = self.ui.acrPrecio.text()
-            cantidadM = self.ui.actCantidad.text()
-
-            act = self.datosTotal.actualizar_productos(codigoM, nombreM, modeloM, precioM, cantidadM)
-            if act == 1:
-                self.ui.bBuscarAct.setText("ACTUALIZADO")
-                self.ui.actCodigo.clear()
-                self.ui.actNombre.clear()
-                self.ui.actModelo.clear()
-                self.ui.acrPrecio.clear()
-                self.ui.actCantidad.clear()
-                self.ui.bBuscarAct.setText("Buscar")
-            elif act == 0:
-                self.ui.bBuscarAct.setText("ERROR")
-            else:
-                self.ui.bBuscarAct.setText("INCORRECTO")
+        act = self.datosTotal.actualizar_productos(codigoM, nombreM, modeloM, precioM, cantidadM)
+        if act == 1:
+            self.ui.etInfoAct.setStyleSheet("color: #0e0")
+            self.ui.etInfoAct.setText("Actualizado correctamente")
+            self.ui.actCodigo.clear()
+            self.ui.actNombre.clear()
+            self.ui.actModelo.clear()
+            self.ui.acrPrecio.clear()
+            self.ui.actCantidad.clear()
+        elif act == 0:
+            self.ui.etInfoAct.setStyleSheet("color: #e00")
+            self.ui.etInfoAct.setText("ERROR")
         else:
-            self.ui.bBuscarAct.setText("NO EXISTE")
+            self.ui.etInfoAct.setStyleSheet("color: #e00")
+            self.ui.etInfoAct.setText("INCORRECTO")
 
     def buscarProducto(self):
         nombreProducto = self.ui.inputBuscar.text()
@@ -112,17 +106,31 @@ class MiApp(QtWidgets.QMainWindow):
             self.ui.tProductosB.setItem(tablerow, 4, QtWidgets.QTableWidgetItem(row[4]))
             tablerow += 1
 
-    def eliminarProducto(self):
-        eliminar = self.ui.inputBuscarDlt.text()
-        eliminar = str("'" + eliminar + "'")
+    def buscarProductoAct(self):
+        codigoProducto = self.ui.idProducto.text()
+        codigoProducto = str("'" + codigoProducto + "'")
 
-        respuesta = (self.datosTotal.eliminar_productos(eliminar))
-        datos = self.datosTotal.buscar_productos()
-        i = len(datos)
+        datosB = self.datosTotal.buscar_id_producto(codigoProducto)
+        i = len(datosB)
+
+        self.ui.tProductosB.setRowCount(i)
+        for row in datosB:
+            self.ui.actCodigo.setText(row[0])
+            self.ui.actNombre.setText(row[1])
+            self.ui.actModelo.setText(row[2])
+            self.ui.acrPrecio.setText(row[3])
+            self.ui.actCantidad.setText(row[4])
+
+    def buscarProductoDel(self):
+        codigoProducto = self.ui.inputBuscarDlt.text()
+        codigoProducto = str("'" + codigoProducto + "'")
+
+        datosB = self.datosTotal.buscar_id_producto(codigoProducto)
+        i = len(datosB)
 
         self.ui.tProductosDlt.setRowCount(i)
         tablerow = 0
-        for row in datos:
+        for row in datosB:
             self.ui.tProductosDlt.setItem(tablerow, 0, QtWidgets.QTableWidgetItem(row[0]))
             self.ui.tProductosDlt.setItem(tablerow, 1, QtWidgets.QTableWidgetItem(row[1]))
             self.ui.tProductosDlt.setItem(tablerow, 2, QtWidgets.QTableWidgetItem(row[2]))
@@ -130,12 +138,23 @@ class MiApp(QtWidgets.QMainWindow):
             self.ui.tProductosDlt.setItem(tablerow, 4, QtWidgets.QTableWidgetItem(row[4]))
             tablerow += 1
 
+    def eliminarProducto(self):
+        eliminar = self.ui.inputBuscarDlt.text()
+        eliminar = str("'" + eliminar + "'")
+
+        respuesta = (self.datosTotal.eliminar_productos(eliminar))
+
         if not respuesta:
-            self.ui.bOkDlt.setText("NO EXISTE")
+            self.ui.etInfoDlt.setStyleSheet("color: #e00")
+            self.ui.etInfoDlt.setText("NO EXISTE")
         elif respuesta == 0:
-            self.ui.bOkDlt.setText("NO EXISTE")
+            self.ui.etInfoDlt.setStyleSheet("color: #e00")
+            self.ui.etInfoDlt.setText("NO EXISTE")
         else:
-            self.ui.bOkDlt.setText("ELIMINADO CORRECTAMENTE")
+            self.ui.etInfoDlt.setStyleSheet("color: #0e0")
+            self.ui.etInfoDlt.setText("Eliminado Correctamente")
+            self.ui.inputBuscarDlt.clear()
+            self.ui.tProductosDlt.clearContents()
 
 
 if __name__ == '__main__':
